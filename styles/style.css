@@ -1,0 +1,888 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Staatliches&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+
+.p-responsive {
+  font-size: 1.3rem;
+  font-family: 'Roboto Serif', sans-serif;
+}
+
+main,
+header {
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////FONDOS Y FONT */
+
+.bgimage {
+  background: url(../assets/floor-tile\ -\ copia.png) repeat;
+}
+
+.bgimagedos {
+  background: url(../assets/floor-tile.png) repeat;
+}
+
+h1,
+h2 {
+  font-family: "Staatliches", cursive;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////NAVBAR */
+
+.sidebar {
+  z-index: 1;
+  position: fixed;
+  left: -5rem;
+  height: 100%;
+  width: 9rem;
+  background-color: #96a3a0;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul {
+  height: 90vh;
+  padding: 0;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  position: relative;
+  left: -10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+
+.sidebar ul a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 200ms ease;
+  border-radius: 8rem;
+}
+
+.sidebar ul a:hover {
+  padding-left: 2rem;
+  background-color: #1e9779;
+  padding: 1.5rem;
+}
+
+#check {
+  display: none;
+}
+
+#open_sb {
+  position: fixed;
+  top: 1rem;
+  left: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  transition: all 0.5s ease;
+  width: 30;
+  height: 30;
+}
+
+#logo {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 8rem;
+  transition: all 0.5s ease;
+}
+
+#logo:hover {
+  background-color: white;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ #open_sb {
+  left: 3rem;
+}
+
+#check:checked ~ .sidebar ul li {
+  left: 0;
+}
+
+#check:checked ~ nav ~ * {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+#open_sb:hover {
+  color: blue;
+}
+
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 4rem;
+  height: 4.3rem;
+  right:3vw;
+  top: 3vh;
+  border-radius: 8rem;
+  background-color: white;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+  transition:all .5s ease;
+  transition-property:width, height;
+}
+
+.shop:hover {
+  background-color: #59e4c1;
+}
+
+#shop-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+#shop-counter {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3rem;
+  position: fixed;
+  border-radius: 8rem;
+  background-color: red;
+  right:2.5vw;
+  top: 3.5vh;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////WEBKIT SCROLLBAR */
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e9779;
+  border-radius: 5px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////MAIN INDEX*/
+
+.header {
+  background-image: url(../assets/perro-Schnauzer.jpg);
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 35%;
+}
+.header h1 {
+  border-radius: 10px;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    #1e9779 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 70%;
+  height: 1.4em;
+}
+.card2 {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body {
+  min-height: 100vh;
+  background: rgb(9, 74, 136);
+  width: 100%;
+}
+.card {
+  position: relative;
+  width: 35rem;
+  height: 25rem;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  border: none !important;
+  background-color: transparent !important;
+}
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card .front_ {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0px 5px 10px #000;
+}
+.card .front_ img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .front_ h3 {
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+}
+.card .back_ {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(58, 150, 150);
+  padding: 1rem;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+.card .back_ .link {
+  border-top: solid 1px #f3f3f3;
+  height: 3.1rem;
+  line-height: 3.1rem;
+}
+.card .back_ .link a {
+  color: #f3f3f3;
+}
+.card .back_ h3 {
+  margin-top: 1.3rem;
+  letter-spacing: 2px;
+}
+.card:hover .front_ {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back_ {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* //////////////////////////////////////////////////////////SCROLL TOP  */
+
+#scroll_top{
+    position:fixed;
+    bottom:5vh;
+    width:3.5rem;
+    transition: all 1s;
+    z-index: 1;
+}
+/* //////////////////////////////////////////////////////////CARDS PERSONALES */
+
+.container-cards {
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.card-personal {
+  width: 19rem;
+  margin: 10px;
+}
+
+.card-personal:hover {
+  transition: all 600ms;
+}
+
+.card-personal:hover .cover img {
+  top: 0;
+  transition: all 400ms;
+  filter: none;
+}
+
+.custom-img {
+  width: 250px;
+}
+
+.card-personal .cover {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-personal .cover img {
+  width: 250px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  top: 40px;
+  margin-left: 1rem;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.card-personal .img-back {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  background-size: cover;
+  bottom: -80px;
+  left: 0;
+  border-radius: 20px;
+  transition: all 300ms;
+}
+
+.card-personal:nth-of-type(1) .img-back {
+  background-color: rgb(235, 100, 168);
+}
+.card-personal:nth-of-type(2) .img-back {
+  background-color: rgb(255, 210, 64);
+}
+.card-personal:nth-of-type(3) .img-back {
+  background-color: rgb(46, 172, 223);
+}
+
+.card-personal:hover .img-back {
+  bottom: -40px;
+}
+
+.card-personal .description {
+  background: url(../assets/square_bg.png);
+  margin-top: -10px;
+  padding: 20px;
+  border-radius: 0px 0px 20px 20px;
+  transition: all 300ms;
+}
+
+.card-personal .description h2 {
+  margin-top: 10px;
+}
+
+.card-personal .description p {
+  margin-top: 10px;
+}
+
+.card-personal .description input {
+  padding: 10px 40px;
+  margin-top: 20px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 300ms;
+}
+
+.card-personal .description input:hover {
+  background-color: rgb(88, 24, 148);
+}
+
+.custom-input {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.conocenos h2 {
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    #012016 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  height: 1.4em;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////JUGUETES*/
+
+.header-juguetes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  background-image: url(../assets/perrocomiendo.jpg);
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 35%;
+  margin: 0;
+  padding: 0;
+}
+.header-juguetes h1 {
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    #eec554 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 70%;
+  text-align: center;
+  padding: 2px;
+  height: 1.4em;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////FARMACIA*/
+
+.header-farmacia {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  background-image: url(../assets/gato.jpg);
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 35%;
+  margin: 0;
+  padding: 0;
+}
+.header-farmacia h1 {
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    rgba(100, 223, 253, 0.8) 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 70%;
+  text-align: center;
+  padding: 2px;
+  height: 1.4em;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.contenedor .cartas {
+  width: 330px;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 10px;
+  margin-left: 3.7rem;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(255, 255, 255);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+}
+
+.contenedor .cartas img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.contenedor .cartas h3 {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.contenedor .cartas p {
+  padding: 0 1rem;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.info input {
+  width: 18%;
+  text-align: center;
+}
+
+.info button {
+  background-color: rgb(79, 79, 245);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(1, 1, 190);
+  color: white;
+}
+.info button:hover {
+  background-color: rgb(20, 20, 160);
+  transition: 0.3s;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////FORMULARIO*/
+
+.header-contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  background-image: url(../assets/gato-contact.jpeg);
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 60%;
+  margin: 0;
+  padding: 0;
+}
+.header-contact h1 {
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    rgba(236, 146, 27, 0.8) 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 70%;
+  text-align: center;
+  padding: 2px;
+  height: 1.4em;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////FOOTER */
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.custom-img-li {
+  width: 150px;
+}
+.hover-footer:hover {
+  color: rgb(30, 169, 179);
+}
+
+.paddingfooter {
+  padding-left: 9rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////PROXIMAMENTE*/
+
+.header-prox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  background-image: url(../assets/peluqueria.png);
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 35%;
+  margin: 0;
+  padding: 0;
+}
+.header-prox h1 {
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0) 0%,
+    #c22c2c 50%,
+    rgba(131, 58, 180, 0) 100%
+  );
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2px;
+  height: 1.4em;
+}
+
+.contenedor-pelu {
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 15px;
+  padding: 20px 7%;
+  padding-bottom: 80px;
+}
+
+.contenedor-pelu .content-pelu {
+  flex: 1 1 400px;
+}
+
+.box{
+  padding: 3rem;
+  border: 1px solid black;
+  text-align: center;
+  flex: 1 1 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////SHOP*/ 
+
+#shop-a{
+	text-decoration:none;
+	color:inherit;
+}
+
+.shop-container{
+	z-index:3;
+  overflow: auto;
+	border:2px solid rgb(78, 78, 78);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px 0px #5a5a5a8f;
+	position:fixed;
+	width:25rem;
+	height:35rem;
+	top:12vh;
+	right:0vw;
+	background-color:rgb(255, 236, 228);
+	transition:all .5s ease;
+}
+
+.custom-border-bottom {
+  border-bottom: 2px solid black;
+}
+
+.carritoletra{
+  color: black;
+  padding: 0.5rem;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 1.1rem;
+}
+.shop_active{
+	right:-100rem;
+}
+
+.precionombre{
+  display: flex;
+  justify-content: space-around;
+}
+
+.carritototal{
+  color: black;
+  background-color: rgba(71, 214, 190, 0.349);
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////MEDIA QUERY*/
+
+
+
+@media(max-width: 520px){ 
+  .paddingfooter {
+    padding-left: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .header h1{ font-size: 2rem;}
+
+  .sidebar{background:transparent;}
+  .activo{background:#96a3a0;}
+}
+
+@media(max-width: 438px){ 
+  .paddingfooter {
+    padding-left: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .sidebar{background:transparent;}
+  .activo{background:#96a3a0;}
+  .header h1{ font-size: 1.5rem;}
+}
+
+@media(max-width: 375px){ 
+  .header{background-position: none;}
+  .header h1{ font-size: 1rem;}
+  .sidebar{background: transparent;}
+  .activo{background:#96a3a0}
+  .card-responsive {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  .card-responsive2{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .custom-h3 {
+    font-size: 1.5rem;
+  }
+  .p-responsive {
+    font-size: 1rem;
+  }
+  .paddingfooter {
+    padding-left: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .shop {
+    width: 3rem;
+    height: 3rem;
+  }
+  #shop-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  #shop-counter{
+   top: 1.5vh;
+  }
+  .contenedor .cartas{
+    margin-left: 0.5rem;
+  }
+  .shop-container {
+    width: 15rem;
+    height: 25rem;
+  }
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////CARRITO*/
+
+
+.divcarritocontenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carritobutton {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+  margin: auto;
+  
+ }
+ 
+ .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+ 
+ .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+     to left,
+     hsl(340deg 100% 16%) 0%,
+     hsl(340deg 100% 32%) 8%,
+     hsl(340deg 100% 32%) 92%,
+     hsl(340deg 100% 16%) 100%
+   );
+ }
+ 
+ .front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+
+ .carritobutton:hover {
+  filter: brightness(110%);
+ }
+ 
+ .carritobutton:hover .front {
+  transform: translateY(-6px);
+  transition: transform
+     250ms
+     cubic-bezier(.3, .7, .4, 1.5);
+ }
+ 
+ .carritobutton:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+ }
+ 
+ .carritobutton:hover .shadow {
+  transform: translateY(4px);
+  transition: transform
+     250ms
+     cubic-bezier(.3, .7, .4, 1.5);
+ }
+ 
+ .carritobutton:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+ }
+ 
+.carritobutton:focus:not(:focus-visible) {
+  outline: none;
+ }

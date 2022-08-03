@@ -1,0 +1,56 @@
+        <div class="contenedor">
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="cartas">
+                <img src="../root folder/assets/1416823.png">
+                <div class="info">
+                    <h3>Nombre del objeto</h3>
+                    <p>$130</p>
+                    <p>Cantidad: <input type="number"></p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+      </div>
